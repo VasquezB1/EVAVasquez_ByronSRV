@@ -21,6 +21,13 @@ public class LibroDAO {
 		em.persist(op);
 
 	}
+	
+	public Libro read(int id) {
+
+		Libro op = em.find(Libro.class, id);
+		return op;
+
+	}
 
 	public void upgrade(Libro op) {
 
