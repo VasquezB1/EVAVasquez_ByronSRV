@@ -153,4 +153,12 @@ public class Libro {
         this.numPag = value;
     }
 
+	@Override
+	public String toString() {
+		return "Libro [codigo=" + codigo + ", editorial=" + editorial + ", nombreAutor=" + nombreAutor
+				+ ", nombreLibro=" + nombreLibro + ", numPag=" + numPag + "]";
+	}
+
+    
+    
 }

@@ -51,16 +51,24 @@ public final class LibroSOAP_LibroSOAPPort_Client {
 
         {
         System.out.println("Invoking crearLibro...");
-        ec.edu.ups.pw.Libro _crearLibro_arg0 = null;
-        java.lang.String _crearLibro__return = port.crearLibro(_crearLibro_arg0);
+        ec.edu.ups.pw.Libro libro = null;
+        
+        libro = new Libro();
+        libro.setEditorial("LNS");
+        libro.setNombreLibro("Don Quijote");
+        libro.setNombreAutor("Miguel de Cervantes");
+        libro.setNumPag(150);
+        
+        
+        java.lang.String _crearLibro__return = port.crearLibro(libro);
         System.out.println("crearLibro.result=" + _crearLibro__return);
 
 
         }
         {
         System.out.println("Invoking getLibros...");
-        java.util.List<ec.edu.ups.pw.Libro> _getLibros__return = port.getLibros();
-        System.out.println("getLibros.result=" + _getLibros__return);
+        java.util.List<ec.edu.ups.pw.Libro> libros = port.getLibros();
+        System.out.println("getLibros.result=" + libros);
 
 
         }
